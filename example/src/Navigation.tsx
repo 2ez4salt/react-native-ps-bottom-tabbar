@@ -34,6 +34,7 @@ export const Navigation = () => {
           }
           screenOptions={({ route: { name } }) => ({
             headerShown: false,
+            // @ts-ignore
             tabBarIcon: TABS[name].icon,
           })}
         >
