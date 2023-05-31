@@ -1,23 +1,13 @@
-![Alt Text](blackpsbottomtabbar.gif) ![Alt Text](redpsbottomtabbar.gif)
-
-# react-native-ps-bottom-tabbar
-
-React-native bottom tabbar inspired by PS App.
-
-
-## Installation
-
-```sh
-npm install react-native-ps-bottom-tabbar
-```
-
-## Usage
-
-```js
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import { PSBottomTabBar } from 'react-native-ps-bottom-tabbar';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { FontAwesome, FontAwesome5, Fontisto, Ionicons } from '@expo/vector-icons';
+import { DiscoverScreen, HomeScreen, LibraryScreen, PSScreen, SearchScreen } from './Screens';
 
 const Tab = createBottomTabNavigator();
-
 export enum Routes {
   Play = 'Play',
   Discover = 'Discover',
@@ -33,7 +23,6 @@ const TABS = {
   [Routes.Library]: { icon: <Ionicons name='menu' size={24} color='white' />, label: Routes.Library },
   [Routes.Search]: { icon: <FontAwesome name='search' size={24} color='white' />, label: Routes.Search },
 };
-
 export const Navigation = () => {
   return (
     <SafeAreaProvider>
@@ -58,19 +47,3 @@ export const Navigation = () => {
     </SafeAreaProvider>
   );
 };
-
-// ...
-
-```
-
-## Contributing
-
-All contributes are welcome! 🙏
-
-## License
-
-MIT
-
----
-
-Made with Skia and ❤️
