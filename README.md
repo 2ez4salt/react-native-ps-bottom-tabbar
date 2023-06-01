@@ -124,4 +124,14 @@ export const Navigation = () => {
 
 Make sure to provide the required props (state, navigation, and descriptors) and customize the appearance of the tab bar by adjusting the optional props (selectorStyle, topAreaStyle, and bottomAreaStyle).
 
-Feel free to customize the appearance of the `PSBottomTabBar` component by adjusting the following props
+## Contributing
+
+All contributes are welcome! 🙏
+
+## License
+
+MIT
+
+---
+
+Made with Skia and ❤️
