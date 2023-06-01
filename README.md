@@ -1,19 +1,79 @@
-![Alt Text](blackpsbottomtabbar.gif) ![Alt Text](redpsbottomtabbar.gif)
+![Alt Text](blackpsbottomtabbar.gif)
+![Alt Text](redpsbottomtabbar.gif)
 
-# react-native-ps-bottom-tabbar
+# React Native PS Bottom Tab Bar
 
-React-native bottom tabbar inspired by PS App.
-
+A custom bottom tab bar component for React Native.
 
 ## Installation
 
-```sh
+Install the package using npm:
+
+```shell
 npm install react-native-ps-bottom-tabbar
+```
+
+or with Yarn:
+
+```shell
+yarn add react-native-ps-bottom-tabbar
 ```
 
 ## Usage
 
-```js
+Import the `PSBottomTabBar` component from the package:
+
+```jsx
+import { PSBottomTabBar } from 'react-native-ps-bottom-tabbar';
+
+const MyComponent = () => {
+  // Your code here
+};
+```
+
+Use the PSBottomTabBar component in your code to display the custom bottom tab bar:
+
+```jsx
+<PSBottomTabBar
+  state={state}
+  navigation={navigation}
+  descriptors={descriptors}
+  selectorStyle={{ backgroundColor: '#fff', shadowColor: '#305F84' }}
+  topAreaStyle={{
+    backgroundColor: '#1E1F23',
+    shadowColor: '#000',
+    shadowRate: 2,
+  }}
+  bottomAreaStyle={{
+    backgroundColor: '#1B1C1E',
+    shadowColor: '#000',
+    shadowRate: 2,
+  }}
+/>
+```
+
+## Props
+
+The `PSBottomTabBar` component accepts the following props:
+
+- `state` (required): A state object containing the navigation state.
+- `navigation` (required): The navigation object.
+- `descriptors` (required): An object containing descriptors for the routes.
+- `selectorStyle` (optional): An object that defines the style of the selector. It has the following properties:
+  - `backgroundColor` (optional): The background color of the selector. Defaults to `'#fff'`.
+  - `shadowColor` (optional): The shadow color of the selector. Defaults to `'#305F84'`.
+- `topAreaStyle` (optional): An object that defines the style of the top area. It has the following properties:
+  - `backgroundColor` (optional): The background color of the top area. Defaults to `'#1E1F23'`.
+  - `shadowColor` (optional): The shadow color of the top area. Defaults to `'#000'`.
+  - `shadowRate` (optional): The shadow rate of the top area. Defaults to `2`.
+- `bottomAreaStyle` (optional): An object that defines the style of the bottom area. It has the following properties:
+  - `backgroundColor` (optional): The background color of the bottom area. Defaults to `'#1B1C1E'`.
+  - `shadowColor` (optional): The shadow color of the bottom area. Defaults to `'#000'`.
+  - `shadowRate` (optional): The shadow rate of the bottom area. Defaults to `2`.
+
+## Example usage:
+
+```jsx
 import { PSBottomTabBar } from 'react-native-ps-bottom-tabbar';
 
 const Tab = createBottomTabNavigator();
@@ -60,17 +120,8 @@ export const Navigation = () => {
 };
 
 // ...
-
 ```
 
-## Contributing
+Make sure to provide the required props (state, navigation, and descriptors) and customize the appearance of the tab bar by adjusting the optional props (selectorStyle, topAreaStyle, and bottomAreaStyle).
 
-All contributes are welcome! 🙏
-
-## License
-
-MIT
-
----
-
-Made with Skia and ❤️
+Feel free to customize the appearance of the `PSBottomTabBar` component by adjusting the following props
